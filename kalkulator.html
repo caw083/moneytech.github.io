@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Keuangan MOYTECH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>KALKULATOR KEUANGAN</h1>
+        <main>
+            <form action="" class="nama">
+                <label for="">NAMA LENGKAP</label>
+                <input type="text" id="nama" placeholder="Masukkan Nama"></br> 
+            </form>
+            <br> </br>
+            <form action="" class="penghasilan">
+                <label for="">Berapa Penghasilan Bulanan Anda?</label>
+                <input type="number" id="penghasilan" placeholder="Rp 0">
+            </form>  
+
+            <br> </br>
+                
+            <form action="" class="rumah-tangga">
+                <h3>Biaya Rumah Tangga</h3>
+                <label for="">Uang Makan</label>
+                <input type="number" id="makanan" placeholder="Rp 0"> 
+                <label for="">Sewa/Cicilan Rumah</label>
+                <input type="number" id="sewa" placeholder="Rp 0">
+                <label for="">Tagihan Listrik, Air dan Telepon</label>
+                <input type="number" id="listrik" placeholder="Rp 0">
+                <label for="">Biaya Tambahan</label>
+                <input type="number" id="tambahan" placeholder="Rp 0"></br>
+            </form>
+
+            <br> </br>
+
+            <form action="" class="gaya-hidup">
+                <h3>Biaya Gaya Hidup</h3>
+                <label for="">Belanja</label>
+                <input type="number" id="belanja" placeholder="Rp 0">
+                <label for="">Hiburan</label>
+                <input type="number" id="hiburan" placeholder="Rp 0">
+                <label for="">Langganan</label>
+                <input type="number" id="langganan" placeholder="Rp 0">
+                <label for="">Liburan</label>
+                <input type="number" id="liburan" placeholder="Rp 0"></br> 
+            </form>
+
+            <br> </br>
+            
+            <form action="" class="transportasi">
+                <h3>Biaya Transportasi</h3>
+                <label for="">Transportasi Umum</label>
+                <input type="number" id="transportasi" placeholder="Rp 0">
+                <label for="">Bensin Parkir, Tol</label>
+                <input type="number" id="bensin" placeholder="Rp 0">
+                <label for="">Perawatan Kendaraan</label>
+                <input type="number" id="perawatan" placeholder="Rp 0">
+                <label for="">Biaya Tambahan</label>
+                <input type="number" id="lainnya" placeholder="Rp 0"></br> 
+            </form>
+
+            <br> </br>
+            
+            <form action="" class="pendidikan">
+                <h3>Biaya Pendidikan</h3>
+                <label for="">Uang Sekolah Bulanan</label>
+                <input type="number" id="sekolah" placeholder="Rp 0">
+                <label for="">Uang Saku Anak</label>
+                <input type="number" id="saku" placeholder="Rp 0">
+                <label for="">Uang Buku Anak</label>
+                <input type="number" id="buku" placeholder="Rp 0">
+                <label for="">Biaya Tambahan</label>
+                <input type="number" id="lainnya" placeholder="Rp 0"></br> 
+            </form>
+            
+            <br> </br>
+            
+            <form action="" class="pengeluaran-lain">
+                <h3>Biaya Tetap Lainnya</h3>
+                <label for="">Membantu Keluarga</label>
+                <input type="number" id="ortu" placeholder="Rp 0">
+                <label for="">Asuransi</label>
+                <input type="number" id="asuransi" placeholder="Rp 0">
+                <label for="">Investasi</label>
+                <input type="number" id="investasi" placeholder="Rp 0"></br> 
+            </form>
+            
+            <br> </br>
+            <button id="hitung">Hitung Hasil</button><br>
+            <div id="output" class="output"></div></br>
+        </main>
+        <script>
+            const peng = document.getElementById('penghasilan')
+            const mak = document.getElementById('makanan')
+            const sew = document.getElementById('sewa')
+            const lis = document.getElementById('listrik')
+            const tam = document.getElementById('tambahan')
+            const bel = document.getElementById('belanja')
+            const hib = document.getElementById('hiburan')
+            const lan = document.getElementById('langganan')
+            const lib = document.getElementById('liburan')
+            const tra = document.getElementById('transportasi')
+            const ben = document.getElementById('bensin')
+            const pera = document.getElementById('perawatan')
+            const lain = document.getElementById('lainnya')
+            const seko = document.getElementById('sekolah')
+            const sak = document.getElementById('saku')
+            const b = document.getElementById('buku')
+            const ort = document.getElementById('ortu')
+            const asur = document.getElementById('asuransi')
+            const inve = document.getElementById('investasi')
+            const hitung = document.getElementById('hitung')
+            const output = document.getElementById('output')
+            const nama = document.getElementById('nama')
+        
+            function formatNumber(num) {
+                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            }
+        
+            function getNumericValue(element) {
+                return parseFloat(element.value) || 0;
+            }
+        
+            hitung.addEventListener('click', function(){
+                let pen = getNumericValue(peng);
+                let ma = getNumericValue(mak);
+                let se = getNumericValue(sew);
+                let li = getNumericValue(lis);
+                let ta = getNumericValue(tam);
+                let be = getNumericValue(bel);
+                let hi = getNumericValue(hib);
+                let la = getNumericValue(lan);
+                let l = getNumericValue(lib);
+                let tr = getNumericValue(tra);
+                let bes = getNumericValue(ben);
+                let per = getNumericValue(pera);
+                let lai = getNumericValue(lain);
+                let sek = getNumericValue(seko);
+                let sa = getNumericValue(sak);
+                let bu = getNumericValue(b);
+                let tu = getNumericValue(ort);
+                let asu = getNumericValue(asur);
+                let inv = getNumericValue(inve);
+        
+                let x = ma + se + li + ta + be + hi + la + l + tr + bes + per + lai + sek + sa + bu + tu + asu + inv;
+                let z = pen - x;
+        
+                let name = nama.value;
+                output.innerHTML = `Hallo, ${name} dari total Penghasilan sebesar Rp ${formatNumber(pen)} dengan total Pengeluaran Biaya sebesar Rp ${formatNumber(x)} , maka Tambahan Tabungan anda sebesar Rp ${formatNumber(z)}`;
+            })
+        </script>
+</body>
+</html>

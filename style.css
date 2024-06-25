@@ -1,0 +1,140 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    color: #0c0c0c;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    background-image: url("./baground.jpg");
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .nama {
+    gap: px;
+    width: 35%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: rgb(229, 235, 237);
+    border: rgb(229, 235, 237);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .penghasilan {
+    gap: px;
+    width: 35%;
+    margin: 0 auto;
+    padding: 0;
+    border: rgb(229, 235, 237);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .rumah-tangga,
+  .gaya-hidup,
+  .transportasi,
+  .pendidikan,
+  .pengeluaran-lain {
+    gap: px;
+    width: 35%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: rgb(229, 235, 237);
+    border: rgb(229, 235, 237);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    border: 0;
+    width: 35%;
+    margin: 0 auto;
+    padding: 0%;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 26px;
+    padding: 6px 1pc;
+    font-family: "Times New Roman", Times, serif;
+    font-size: large;
+  }
+  
+  button:hover {
+    background-color: #00bbf0;
+    transition: 1s all ease-in-out;
+  }
+  
+  .output {
+    gap: px;
+    width: 35%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: rgb(229, 235, 237);
+    border: rgb(229, 235, 237);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: larger;
+  }
+  
+  h1 {
+    color: #00bbf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+  }
+  
+  label {
+    text-align: center;
+    padding: 5px;
+  }
+  
+  input {
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7%;
+    height: 25px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    /* font-weight: bold;
+    color: black; */
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  h6 {
+    text-align: center;
+  }
+  
+  @media (max-width: 767px) {
+    .nama,
+    .penghasilan,
+    .gaya-hidup,
+    .rumah-tangga,
+    .transportasi,
+    .pendidikan,
+    .pengeluaran-lain,
+    button,
+    .output {
+      width: 300px;
+    }
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-style: bold;
+    }
+  }
